@@ -2,7 +2,7 @@
 
 A small bookshop database with a text-to-SQL feature, gated in CI by [querywarden](https://github.com/NefziSofien/querywarden).
 
-To see the gate work, open the pull request that changes the prompt version. Its check fails and the report appears as a comment.
+To see the gate work, open [the pull request that changes the prompt version](https://github.com/NefziSofien/querywarden-example/pull/1). Its check fails and the report appears as a comment.
 
 The answers are hand-written recordings, not model output. This repository shows how the gate behaves. It says nothing about the accuracy of any model.
 
