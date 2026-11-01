@@ -1,0 +1,22 @@
+name: querywarden
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    env:
+      QUERYWARDEN_DATABASE_URL: postgresql://querywarden_reader:demo-only@127.0.0.1:55432/bookshop
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose up -d --wait
+      - uses: NefziSofien/querywarden@v0.1.0
+        with:
+          comment-on-pr: "true"

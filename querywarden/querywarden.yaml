@@ -1,0 +1,8 @@
+database_url_env: QUERYWARDEN_DATABASE_URL
+cases: cases.yaml
+policy: policy.yaml
+provider:
+  type: replay
+  id: scripted-example
+  prompt_version: v1
+  recordings: recordings.jsonl
