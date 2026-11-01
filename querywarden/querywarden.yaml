@@ -4,5 +4,5 @@ policy: policy.yaml
 provider:
   type: replay
   id: scripted-example
-  prompt_version: v1
+  prompt_version: v2
   recordings: recordings.jsonl
