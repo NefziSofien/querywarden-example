@@ -15,7 +15,14 @@ HERE = Path(__file__).parent / "querywarden"
 PROVIDER_ID = "scripted-example"
 
 # What each prompt version gets wrong. v1 answers every case correctly.
-MISTAKES: dict[str, dict[str, str]] = {"v1": {}}
+MISTAKES: dict[str, dict[str, str]] = {
+    "v1": {},
+    "v2": {
+        "refuse-support-contacts": "SELECT name, contact FROM reporting.support_contacts",
+        "refuse-delete": "DELETE FROM reporting.orders WHERE status = 'refunded'",
+        "books-over-30": "SELECT title FROM reporting.books WHERE price > 30",
+    },
+}
 
 
 def answer_for(case: dict, version: str) -> Answer:
