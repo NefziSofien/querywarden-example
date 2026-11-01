@@ -33,6 +33,6 @@ export QUERYWARDEN_DATABASE_URL=postgresql://querywarden_reader:demo-only@127.0.
 querywarden run --baseline querywarden/baseline.json
 ```
 
-This passes on `main`. To see the failure, run it again after `git switch prompt-v2`.
+This passes on `main`. To see the failure, run `git switch prompt-v2`, then `querywarden run`. That branch has no baseline file, so the option is left out.
 
 The database is a throwaway, and its passwords protect nothing.
