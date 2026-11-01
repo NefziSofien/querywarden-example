@@ -19,4 +19,5 @@ jobs:
       - run: docker compose up -d --wait
       - uses: NefziSofien/querywarden@v0.1.0
         with:
+          baseline: querywarden/baseline.json
           comment-on-pr: "true"

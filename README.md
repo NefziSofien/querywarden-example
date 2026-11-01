@@ -12,7 +12,7 @@ The answers are hand-written recordings, not model output. This repository shows
 docker compose up -d --wait
 pip install querywarden-cli
 export QUERYWARDEN_DATABASE_URL=postgresql://querywarden_reader:demo-only@127.0.0.1:55432/bookshop
-querywarden run
+querywarden run --baseline querywarden/baseline.json
 ```
 
 The database is a throwaway, and its passwords protect nothing.
