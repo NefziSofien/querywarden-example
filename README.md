@@ -4,7 +4,7 @@ A small bookshop database with a text-to-SQL feature, gated in CI by [querywarde
 
 ## See the gate work
 
-[This pull request](https://github.com/NefziSofien/querywarden-example/pull/1) changes the prompt version from v1 to v2. The new answers expose customer contacts, attempt a `DELETE` and get one query wrong, so the required `gate` check fails and the report appears as a comment. The pull request was closed without merging, and stays readable.
+[This pull request](https://github.com/NefziSofien/querywarden-example/pull/1) changes the prompt version from v1 to v2. The new answers expose customer contacts, attempt a `DELETE` and get one query wrong, so the required `gate` check fails and the report appears as a comment. The pull request stays open as the example, and cannot be merged.
 
 | | Prompt | Accuracy | Safety failures | Gate |
 |---|---|---:|---:|---|
@@ -33,6 +33,6 @@ export QUERYWARDEN_DATABASE_URL=postgresql://querywarden_reader:demo-only@127.0.
 querywarden run --baseline querywarden/baseline.json
 ```
 
-This passes on `main`. To see the failure, run `git switch prompt-v2`, then `querywarden run`. That branch has no baseline file, so the option is left out.
+This passes on `main`. To see the failure, run `git switch prompt-v2`, then the same command.
 
 The database is a throwaway, and its passwords protect nothing.
